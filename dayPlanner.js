@@ -2,7 +2,7 @@
 const messageComponents = {
     excercise : ['Jogging', 'Cycling', 'Dancing', 'Rowing', 'Swimming', 'Body weight excercises'],
     meal : ['Porridge', 'Bread', 'Veg', 'Salad', 'Rice', 'Fruit'],
-    relaxation : ['Watch a film', 'read a book', 'play computer game', 'surf the internet']
+    relaxation : ['watch a film', 'read a book', 'play computer games', 'surf the internet']
 };
 
 // returning an array of the randomly selected components
@@ -15,4 +15,10 @@ for(key in object){
 return selectedMessageComponents;
 }
 
-console.log(selectMessageComponents(messageComponents));
+// formatting the message using the components
+function generateMessage(){
+    const Components = selectMessageComponents(messageComponents);
+    console.log(`Todays morning excercise will be ${Components[0]}. The main meal of the day is ${Components[1]}. This evening you will ${Components[2]}.`);
+}
+
+generateMessage();
